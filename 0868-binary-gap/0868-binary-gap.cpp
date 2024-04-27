@@ -9,14 +9,15 @@ public:
             n = n / 2;
         }
         int max = 0;
-        int last = 0;
-        for(int i = binary.size() - 1; i >= 0 ; i--)
+        int last = binary.size()-1;
+        for(int i = 0; i < binary.size() ; i++)
         {
+            cout<<binary[i];
             if(binary[i]==1)
             {
-                if(max < (last - i))
+                if(max <  i -last)
                 {
-                    max = last - i;
+                    max =  i - last;
                 }
                 last = i;
             }
